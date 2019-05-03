@@ -166,10 +166,10 @@ class IgnorableChangeNotifier extends ChangeNotifier {
             exception: exception,
             stack: stack,
             library: 'Photoview library',
-            context: 'while dispatching notifications for $runtimeType',
-            informationCollector: (StringBuffer information) {
-              information.writeln('The $runtimeType sending notification was:');
-              information.write('  $this');
+            context: DiagnosticsNode.message('while dispatching notifications for $runtimeType'),
+            informationCollector: () {
+              //information.message('The $runtimeType sending notification was:');
+              //information.message('  $this');
             },
           ));
         }
